@@ -49,7 +49,7 @@
     background-image: url('../assets/dragon.jpg');
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: 1500px auto; 
+    background-size: 80% auto; 
     margin: 0;
     background-color: var(--color-bg);
   }
@@ -63,7 +63,7 @@
     background-color: var(--color-surface);
     display: flex;
     justify-content: space-between;
-    height: 110px;
+    height: 6.875rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -79,14 +79,14 @@
 }
 
 .navbar-icon {
-    margin-left: 10px;
-    width: 85px;
-    height: 85px;
+    margin-left: 0.75px;
+    width: 5.3125rem;
+    height: 5.3125rem;
 }
 
 .logo {
-    width: 300px;
-    height: 60px;
+    width: 18.75rem;
+    height: 3.75rem;
     padding-left: 0px; /* mueve el logo a la derecha */
   }
 
@@ -101,8 +101,8 @@
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 35px;
-    margin-top: 40px;
+    gap: 2.1rem;
+    margin-top: 2.5rem;
 }
 
 .magic-link {
@@ -123,11 +123,11 @@
 .magic-link::after {
     content: "";
     position: absolute;
-    top: -50px;
+    top: -3.125rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     background-image: url("../assets/skills.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -150,9 +150,9 @@
 
 
 .magic-link:hover::after {
-    top: -30px;
-    opacity: 1;         /* aparece al hacer hover */
-    transform: translateX(-50%) rotateY(360deg); /* animación de giro */
+    top: -1.9rem;
+    opacity: 1;         /* appear in the hover */
+    transform: translateX(-50%) rotateY(360deg); /* spin animation */
 }
 
 .magic-link:hover {
@@ -161,55 +161,89 @@
 
 
 .magic-link:hover::before {
-    height: 100%; /* relleno de abajo hacia arriba */
+    height: 100%; /* fill from bottom to top */
   }
 
+.nav-right {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 0.4rem;
+    cursor: pointer;
+  }
+  
+.hamburger span {
+    width: 1.8rem;
+    height: 0.4rem;
+    background: var(--color-accent);
+    border-radius: 3px;
+  }
 
 .hero-card {
   display: flex;
   justify-content: center;
   border:2px solid var(--color-border);
-  width: 65%;
+  width: 70%;
   height: auto;
-  margin-top: 100px;
+  margin-top: 6.25rem;
   align-items: center;
   background-color: rgba(207, 169, 126, 0.85);
 }
 
 .card {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  height: 540px;
+  height: auto;
   justify-content: space-between;
-  gap: 20px;
+  gap: 1rem;
   z-index: 500;
   justify-content: center;
   align-items: center;
 
 }
 
+.card h1 {
+  flex-basis: 100%;
+  font-family: var(--font-body);
+  font-size: 5rem;
+  color: var(--color-text);
+  width: 100%;
+  height: auto;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 0.625rem;
+}
+
 .card-left {
-  width: 25%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-left: 16px;
-  margin-top: 60px;
-  gap: 20px;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  gap: 1.225rem;
 }
 
 .card-left h2 {
   font-family: var(--font-subtitle);
   font-size: 1.625rem;
   color: var(--color-text-light);
-  width: 400px;
+  width: 100%;
   text-align: center;
   text-decoration: underline;
 }
 
 .card-left img {
-  width: 200px;
+  width: 12.5rem;
   height: auto;
   border-left: 3px solid var(--color-text);
   border-right: 3px solid var(--color-text);
@@ -229,25 +263,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-left: 12px;
+  margin-left: 0.75rem;
   width: 50%;
   justify-content: space-between;
 }
 
-.card-center h1 {
-  font-family: var(--font-body);
-  font-size: 4.375rem;
-  color: var(--color-text);
-  width: 600px;
-  height: auto;
-  text-align: center;
-  justify-self: start;
-  text-decoration: underline;
-  margin-bottom: 80px;
-}
-
 .character-list {
-  margin-bottom: 50px;
+  margin-bottom: 2rem;
 }
 
 .sub-list {
@@ -259,7 +281,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 20px
+  gap: 1.5rem;
 }
 
 
@@ -274,24 +296,25 @@
 }
 
 .bullet-arrow {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: transform 0.5s ease;
 }
 
 .bullet-arrow:hover {
-  transform: translateX(0%) s(360deg);
+  transform: rotate(360deg);
 }
 
 .arrow {
-  width: 26px;
-  height: 26px;
+  width: 1.625rem;
+  height: 1.625rem;
   padding: 2%;
 }
 
 .card-right {
   margin-top: 3rem;
-  width: 25%;
-  margin-right: 8px;
+  width: 20%;
+  margin-right: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -300,9 +323,11 @@
 .box-list {
   border: 3px solid var(--color-text);
   background-color: var(--color-border);
-  width: 90%;
-  height: 250px;
+  width: 100%;
+  height: auto;
   text-align: center;
+  justify-content: center;
+  margin-bottom: 4rem;
 }
 
 .box-list h2 {
@@ -320,3 +345,92 @@
   padding: 0rem 0.5rem;
   font-family: var(--font-subtitle);
 }
+
+/* Mobile phones (portrait) */
+@media (max-width: 480px) { 
+
+.logo {
+  display: none;
+}
+
+.nav-left {
+  width: 20%;
+}
+
+.nav-links {
+  display: none;
+}
+
+.hamburger {
+  display: flex;
+  margin-right: 5rem;
+}
+
+.hamburger span {
+  display: flex;
+  background-color: #FF7B42;
+}
+
+.main {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.hero-card {
+  width: 100%;
+  height: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+
+.card h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.character-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.character-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-right {
+  width: 70%;
+}
+
+.box-list {
+  width: 100%;
+}
+
+/* Small devices (larger phones, landscape) */
+@media (max-width: 576px) { ... }
+
+
+/* Tablets (portrait) */
+@media (max-width: 768px) { ... }
+
+
+/* Tablets (landscape) o laptops pequeños */
+@media (max-width: 992px) { ... }
+
+
+/* Desktop normales */
+@media (max-width: 1200px) { ... }
+
+/* Pantallas grandes */
+@media (max-width: 1400px) { ... }
